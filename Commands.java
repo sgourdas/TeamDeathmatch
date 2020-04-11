@@ -68,7 +68,7 @@ public class Commands implements CommandExecutor {
         	
         		if(!TDM.isOpen) {
         			
-        			player.sendMessage(TDM.prefix + "The Emerland Kingdom's Team Deathmatch has not opened yet.");
+        			player.sendMessage(TDM.prefix + "The Team Deathmatch has not opened yet.");
         			return false;
         			
         		}
@@ -98,7 +98,7 @@ public class Commands implements CommandExecutor {
         		
         		if(!TDM.isOpen) {
         			
-        			player.sendMessage(TDM.prefix + "The Emerland Kingdom's Team Deathmatch has not even opened yet.");
+        			player.sendMessage(TDM.prefix + "The Team Deathmatch has not even opened yet.");
         			return false;
         			
         		}
@@ -322,13 +322,15 @@ public class Commands implements CommandExecutor {
         			player.sendMessage(ChatColor.GOLD + "/tdm start" + ChatColor.GREEN + " Start the TDM match.");
         			player.sendMessage(ChatColor.GOLD + "/tdm set lives <lives>" + ChatColor.GREEN + " Set each player's lives.");
         			player.sendMessage(ChatColor.GOLD + "/tdm set spawn <blueteam | redteam | spectators>" + ChatColor.GREEN + " Set type of spawn.");
-        			player.sendMessage(ChatColor.GOLD + "/tdm set reload" + ChatColor.GREEN + " Reload the plugin.");
+        			player.sendMessage(ChatColor.GOLD + "/tdm reload" + ChatColor.GREEN + " Reload the plugin configuration.");
+        			player.sendMessage(ChatColor.GOLD + "/tdm help" + ChatColor.GREEN + " Show the help menu.");
         			
         		} else if(player.hasPermission("tdm.user")) {
         			
         			player.sendMessage(ChatColor.GOLD + "/tdm join" + ChatColor.GREEN + " Join the TDM queue."); 
         			player.sendMessage(ChatColor.GOLD + "/tdm leave" + ChatColor.GREEN + " Leave the TDM queue.");
         			player.sendMessage(ChatColor.GOLD + "/tdm team [player]" + ChatColor.GREEN + " Show the player's team.");
+        			player.sendMessage(ChatColor.GOLD + "/tdm help" + ChatColor.GREEN + " Show the help menu.");
         			
         		}
         		

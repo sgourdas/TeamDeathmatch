@@ -18,7 +18,6 @@ import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 
 //TODO can set lives to 0 and not use extra array
-// TODO rewards on config
 public class TDM extends JavaPlugin {
 	
 	protected static boolean gameRunning = false, isOpen = false;
@@ -91,7 +90,7 @@ public class TDM extends JavaPlugin {
 	    					
 	    		TDM.redTeam.remove(player);
 	    		//TDM.redTeam.replace(player, currPlayerLives - 1);////
-	    		Bukkit.broadcastMessage(TDM.prefix + player.getName() + " has been eliminated from the Emerland Kingdom's team deathmatch!");
+	    		Bukkit.broadcastMessage(TDM.prefix + player.getName() + " has been eliminated from the Team Deathmatch!");
 	    		TDM.redTeamScoreboard.removeEntry(player.getName());
 	    			
 	    		if(TDM.spectatorSpawn != null)
@@ -102,7 +101,7 @@ public class TDM extends JavaPlugin {
 	    		TDM.redTeam.replace(player, currPlayerLives - 1);
 	    		player.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 999999, 1));
 	    		event.setRespawnLocation(TDM.redTeamSpawn);
-	    		player.sendMessage(TDM.prefix + "You have " + (currPlayerLives - 1) + " lives left for the deathmatch!");
+	    		player.sendMessage(TDM.prefix + "You have " + (currPlayerLives - 1) + " lives left for the Deathmatch!");
 	    				
 	    	}
 	    			
@@ -120,7 +119,7 @@ public class TDM extends JavaPlugin {
 	    	if(currPlayerLives == 1) {	// if the player had 1 life left, remove him from the game
 	    					
 	    		TDM.blueTeam.remove(player);
-	    		Bukkit.broadcastMessage(TDM.prefix + player.getName() + " has been eliminated from the Emerland Kingdom's team deathmatch!");
+	    		Bukkit.broadcastMessage(TDM.prefix + player.getName() + " has been eliminated from the Team Deathmatchh!");
 	    		TDM.blueTeamScoreboard.removeEntry(player.getName());
 	    			
 	    		if(TDM.spectatorSpawn != null)
@@ -189,7 +188,7 @@ public class TDM extends JavaPlugin {
 	static public void award(TDMTeam teamWon) {
 		
 		for(Player onlineP : Bukkit.getServer().getOnlinePlayers())
-    		onlineP.sendTitle(ChatColor.GOLD + "" + ChatColor.BOLD + teamWon + " team is victorious!", ChatColor.GREEN + "The Emerland Kingdom praises them with gifts!", 10, 40, 20);
+    		onlineP.sendTitle(ChatColor.GOLD + "" + ChatColor.BOLD + teamWon + " team is victorious!", ChatColor.GREEN + "We praise them with gifts!", 10, 40, 20);
 		
 		ArrayList<Player> wTeam;
 		

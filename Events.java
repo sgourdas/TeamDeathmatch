@@ -100,7 +100,7 @@ public class Events implements Listener {
 			if(TDM.redTeam.containsKey(player)) {
 				
 				TDM.redTeam.remove(player);
-		    	Bukkit.broadcastMessage(TDM.prefix + player.getName() + " has been eliminated from the Emerland Kingdom's team deathmatch!");
+		    	Bukkit.broadcastMessage(TDM.prefix + player.getName() + " has been eliminated from the Team Deathmatch!");
 		    	TDM.redTeamScoreboard.removeEntry(player.getName());
 		    	player.removePotionEffect(PotionEffectType.GLOWING);
 		    			
@@ -114,7 +114,7 @@ public class Events implements Listener {
 		    } else if(TDM.blueTeam.containsKey(player)) {
 		    		
 		    	TDM.blueTeam.remove(player);
-		    	Bukkit.broadcastMessage(TDM.prefix + player.getName() + " has been eliminated from the Emerland Kingdom's team deathmatch!");
+		    	Bukkit.broadcastMessage(TDM.prefix + player.getName() + " has been eliminated from the Team Deathmatch!");
 		    	TDM.blueTeamScoreboard.removeEntry(player.getName());
 		    	player.removePotionEffect(PotionEffectType.GLOWING);
 		    	
