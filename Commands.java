@@ -298,7 +298,7 @@ public class Commands implements CommandExecutor {
         	} else if(args[0].equalsIgnoreCase("reload")) {
         		
         		TDM.plugin.reloadConfig();
-        		
+
         		TDM.rewards = TDM.plugin.getConfig().getStringList("rewards");
         		TDM.blueTeamSpawn = (Location) TDM.plugin.getConfig().get("spawns.blueteam");
         		TDM.redTeamSpawn = (Location) TDM.plugin.getConfig().get("spawns.redteam");
@@ -306,6 +306,7 @@ public class Commands implements CommandExecutor {
         		TDM.playerLives = TDM.plugin.getConfig().getInt("lives");
         		
         		TDM.plugin.saveConfig();
+        		
         		player.sendMessage(TDM.prefix + "TDM has been reloaded");
         		
         	} else if(args[0].equalsIgnoreCase("help")) {

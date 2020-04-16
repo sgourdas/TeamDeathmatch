@@ -200,12 +200,12 @@ public class TDM extends JavaPlugin {
 		ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
 		String playerName;
 		
-		for(int i = 0 ; i < wTeam.size(); i++) {
+		for(int teamPlayer = 0 ; teamPlayer < wTeam.size(); teamPlayer++) {
 			
-			playerName = wTeam.get(i).getName();
+			playerName = wTeam.get(teamPlayer).getName();
 			String command;
 			
-			for(int rewardCounter = 0 ; i < TDM.rewards.size() ; i++) {
+			for(int rewardCounter = 0 ; rewardCounter < TDM.rewards.size() ; rewardCounter++) {
 				
 				command = TDM.rewards.get(rewardCounter);
 				command = command.replace("%player%", playerName);
