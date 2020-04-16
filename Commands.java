@@ -306,7 +306,6 @@ public class Commands implements CommandExecutor {
         		TDM.playerLives = TDM.plugin.getConfig().getInt("lives");
         		
         		TDM.plugin.saveConfig();
-        		System.out.println(TDM.rewards.get(0));
         		player.sendMessage(TDM.prefix + "TDM has been reloaded");
         		
         	} else if(args[0].equalsIgnoreCase("help")) {

@@ -71,10 +71,15 @@ public class Events implements Listener {
 			} else if(event.getDamager() instanceof Arrow) {
 				
 				Arrow arrowHitting = (Arrow) event.getDamager();
-				Player whoGotHit = (Player) event.getEntity(), whoHit = (Player) arrowHitting.getShooter();
 				
-				if(((TDM.blueTeam.get(whoHit) != null) && (TDM.blueTeam.get(whoGotHit) != null)) || ((TDM.redTeam.get(whoHit) != null) && (TDM.redTeam.get(whoGotHit) != null)))	// if they are on the same team
-					event.setCancelled(true);
+				if((event.getEntity() instanceof Player) && (arrowHitting.getShooter() instanceof Player)) {
+					
+					Player whoGotHit = (Player) event.getEntity(), whoHit = (Player) arrowHitting.getShooter();
+				
+					if(((TDM.blueTeam.get(whoHit) != null) && (TDM.blueTeam.get(whoGotHit) != null)) || ((TDM.redTeam.get(whoHit) != null) && (TDM.redTeam.get(whoGotHit) != null)))	// if they are on the same team
+						event.setCancelled(true);
+				
+				}
 				
 			}
 			 
